@@ -16,8 +16,18 @@ import {
   Carrot,
 } from "lucide-react";
 
+const days = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+];
+const today = days[new Date().getDay()];
 const MealPlanApp = () => {
-  const [selectedDay, setSelectedDay] = useState("monday");
+  const [selectedDay, setSelectedDay] = useState(today);
   const [activeTab, setActiveTab] = useState("meals");
   const [isScrolled, setIsScrolled] = useState(false);
 
